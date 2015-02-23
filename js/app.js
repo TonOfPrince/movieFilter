@@ -1,4 +1,5 @@
 var movieFilter = angular.module('movieFilterApp',
+  // dependencies
   [
     'ui.router',
     'movieFilterApp.home'
@@ -6,8 +7,10 @@ var movieFilter = angular.module('movieFilterApp',
 
 
 .config(function($stateProvider, $urlRouterProvider) {
+  // default routing
   $urlRouterProvider.otherwise("/");
 
+  //routing
   $stateProvider
     .state('home', {
       url: '/',
