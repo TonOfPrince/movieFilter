@@ -1,43 +1,45 @@
 <!-- CSS -->
 <link rel="stylesheet" href="css/style.css">
 
-<!-- Title -->
-<div class="center" id="title"> Movie Search </div>
-  <!-- Link to Docs -->
-  <a ui-sref="docs" class="center">(Documentation)</a>
-  <!-- Content of the Page -->
-  <div class="center" id="content">
-    <!-- The searchbars and their labels -->
-    <div class="" id="searches">
-      <div class="row">
-        <!-- Search for any property -->
-        <label>Any: </label>
-        <input ng-model="search.$"> <br>
-      </div>
-      <!-- Search only by title -->
-      <div class="row">
-        <label>Title Only: </label>
-        <input ng-model="search.title"><br>
-      </div>
-      <!-- Search only by year -->
-      <div class="row">
-        <label>Year Only: </label>
-        <input ng-model="search.year"><br>
-      </div>
+<div ng-cloak>
+  <!-- Title -->
+  <div class="center" id="title"> Movie Search </div>
+    <!-- Link to Docs -->
+    <a ui-sref="docs" class="center">(Documentation)</a>
+    <!-- Content of the Page -->
+    <div class="center" id="content">
+      <!-- The searchbars and their labels -->
+      <div class="" id="searches">
+        <div class="row">
+          <!-- Search for any property -->
+          <label>Any: </label>
+          <input ng-model="search.$"> <br>
+        </div>
+        <!-- Search only by title -->
+        <div class="row">
+          <label>Title Only: </label>
+          <input ng-model="search.title"><br>
+        </div>
+        <!-- Search only by year -->
+        <div class="row">
+          <label>Year Only: </label>
+          <input ng-model="search.year"><br>
+        </div>
+    </div>
+    <!-- Table displaying the movies that match the searches -->
+    <table id="searchObjResults" class="center">
+      <tr><th>Title</th><th>Categories</th><th>Year</th></tr>
+      <!-- List all th emovies out in a table -->
+      <tr ng-repeat="movieObj in movies.movies | filter:search">
+        <!-- Movie title -->
+        <td>{{movieObj.title}}&nbsp;</td>
+        <td>
+          <!-- Lists each movie's categories -->
+          <span ng-repeat="category in movieObj.categories">{{category}}&nbsp;</span>
+        </td>
+        <!-- Movie year -->
+        <td>{{movieObj.year}}</td>
+      </tr>
+    </table>
   </div>
-  <!-- Table displaying the movies that match the searches -->
-  <table id="searchObjResults" class="center">
-    <tr><th>Title</th><th>Categories</th><th>Year</th></tr>
-    <!-- List all th emovies out in a table -->
-    <tr ng-repeat="movieObj in movies.movies | filter:search">
-      <!-- Movie title -->
-      <td>{{movieObj.title}}&nbsp;</td>
-      <td>
-        <!-- Lists each movie's categories -->
-        <span ng-repeat="category in movieObj.categories">{{category}}&nbsp;</span>
-      </td>
-      <!-- Movie year -->
-      <td>{{movieObj.year}}</td>
-    </tr>
-  </table>
 </div>
