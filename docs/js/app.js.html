@@ -1,0 +1,63 @@
+<!DOCTYPE html><html><head><title>app.js</title><meta http-equiv="Content-Type" content="text/html" charset="UTF-8"><link rel="stylesheet" media="all" href="../docco.css"></head><body><div id="container"><div id="background"></div><div id="jump_to">Jump To &hellip;<div id="jump_wrapper"><div id="jump_page"><a href="../index.html" class="source"><span class="file_name">README</span></a><a href="../js/app.js.html" class="source selected"><span class="base_path">js / </span><span class="file_name">app.js</span></a></div></div></div><table cellpadding="0" cellspacing="0"><thead><tr><th class="docs"><h1>app.js</h1><div class="filepath">js/</div></th><th class="code"></th></tr></thead><tbody><tr id="section-1"><td class="docs"><div class="pilwrap"><a href="#section-1" class="pilcrow">&#182;</a></div>
+</td><td class="code"><div class="highlight"><pre><span class="kd">var</span> <span class="nx">movieFilter</span> <span class="o">=</span> <span class="nx">angular</span><span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="s1">&#39;movieFilterApp&#39;</span><span class="p">,</span> <span class="p">[])</span></pre></div></td></tr><tr id="section-2"><td class="docs"><div class="pilwrap"><a href="#section-2" class="pilcrow">&#182;</a></div><p>controller for filtering movies</p>
+</td><td class="code"><div class="highlight"><pre><span class="p">.</span><span class="nx">controller</span><span class="p">(</span><span class="s1">&#39;MovieFilterCtrl&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">$scope</span><span class="p">,</span> <span class="nx">Movies</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">angular</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span><span class="nx">$scope</span><span class="p">,</span> <span class="nx">Movies</span><span class="p">);</span>
+<span class="p">})</span></pre></div></td></tr><tr id="section-3"><td class="docs"><div class="pilwrap"><a href="#section-3" class="pilcrow">&#182;</a></div><p>factoring for storig movie information</p>
+</td><td class="code"><div class="highlight"><pre><span class="p">.</span><span class="nx">factory</span><span class="p">(</span><span class="s1">&#39;Movies&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span></pre></div></td></tr><tr id="section-4"><td class="docs"><div class="pilwrap"><a href="#section-4" class="pilcrow">&#182;</a></div><p>movies object</p>
+</td><td class="code"><div class="highlight"><pre>  <span class="kd">var</span> <span class="nx">movies</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">&quot;movies&quot;</span><span class="o">:</span> <span class="p">[{</span>
+      <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;The Dark Knight&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;categories&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;Action&quot;</span><span class="p">,</span><span class="s2">&quot;Superhero&quot;</span><span class="p">],</span>
+      <span class="s2">&quot;year&quot;</span><span class="o">:</span> <span class="mi">2008</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Star Wars&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;categories&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;Action&quot;</span><span class="p">],</span>
+      <span class="s2">&quot;year&quot;</span><span class="o">:</span> <span class="mi">1977</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Sleepless In Seattle&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;categories&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;Romance&quot;</span><span class="p">,</span> <span class="s2">&quot;Comedy&quot;</span><span class="p">],</span>
+      <span class="s2">&quot;year&quot;</span><span class="o">:</span> <span class="mi">1993</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;The Lion King&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;categories&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;Children&quot;</span><span class="p">],</span>
+      <span class="s2">&quot;year&quot;</span><span class="o">:</span> <span class="mi">1994</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Toy Story&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;categories&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;Children&quot;</span><span class="p">],</span>
+      <span class="s2">&quot;year&quot;</span><span class="o">:</span> <span class="mi">1995</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;The Shawshank Redemption&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;categories&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;Drama&quot;</span><span class="p">],</span>
+      <span class="s2">&quot;year&quot;</span><span class="o">:</span> <span class="mi">1994</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Gravity&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;categories&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;Drama&quot;</span><span class="p">],</span>
+      <span class="s2">&quot;year&quot;</span><span class="o">:</span><span class="mi">2013</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Independence Day&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;categories&quot;</span><span class="o">:</span> <span class="p">[],</span>
+      <span class="s2">&quot;year&quot;</span><span class="o">:</span> <span class="mi">1996</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Lord of The Rings: The Two Towers&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;categories&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;Action&quot;</span><span class="p">],</span>
+      <span class="s2">&quot;year&quot;</span><span class="o">:</span> <span class="mi">2002</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Frozen&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;categories&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;Children&quot;</span><span class="p">],</span>
+      <span class="s2">&quot;year&quot;</span><span class="o">:</span> <span class="mi">2014</span>
+    <span class="p">}]</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="p">{</span>
+    <span class="nx">movies</span><span class="o">:</span> <span class="nx">movies</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+
+</pre></div></td></tr></tbody></table><div id="generated">generated Mon Feb 23 2015 12:50:37 GMT-0500 (EST)  </div><div id="projectname"><a href="../index.html">Movie Filter</a></div></div></body></html>

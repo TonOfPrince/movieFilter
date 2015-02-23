@@ -7,7 +7,10 @@ var port = process.env.PORT || 1111;
 //ip
 var ip = "127.0.0.1";
 
+// display static pages
 app.use(express.static(__dirname));
+
+// CORS support
 app.use(function(req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
@@ -15,6 +18,7 @@ app.use(function(req, res, next) {
     next();
 });
 
+// movies object
 var movies = { "movies": [{
     "title": "The Dark Knight",
     "categories": ["Action","Superhero"],
@@ -67,12 +71,11 @@ var movies = { "movies": [{
   }]
 }
 
+// request for getting the movies object
 app.get('/movies', function (req, res) {
   console.log('Serving request type ' + req.method + ' for url ' + req.url);
   res.status(201);
-  req.on('end', function() {
-      res.end(JSON.stringify(movies));
-  });
+  res.end(JSON.stringify(movies));
 });
 
 //log where we are listening

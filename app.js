@@ -1,4 +1,6 @@
-var movieFilter = angular.module('movieFilterApp', [])
+var movieFilter = angular.module('movieFilterApp', [
+  'ui.router'
+])
 
 // controller for filtering movies
 .controller('MovieFilterCtrl', function($scope, Movies) {
@@ -22,5 +24,19 @@ var movieFilter = angular.module('movieFilterApp', [])
   return {
     movies: movies
   }
+})
+.config(function($stateProvider, $urlRouterProvider) {
+  $urlRouterProvider.otherwise("/home");
+
+  $stateProvider
+    .state('home', {
+      url: '/home',
+      templateUrl: 'views/home.html',
+      controller: 'MovieFilterCtrl'
+    })
+    .state('docs', {
+      url: '/docs',
+      templateUrl: 'docs/index.html',
+    })
 });
 
