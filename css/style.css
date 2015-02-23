@@ -2,6 +2,7 @@
 .center {
   margin-left: auto;
   margin-right: auto;
+  display: table;
 }
 
 /* specific styles */
@@ -9,20 +10,26 @@ body {
   background-image: url("../img/background.jpg");
   color: white;
 }
+/*.backgroundWrapper {
+  background-image: url("../img/background.jpg");
+}*/
+a {
+  color: white;
+}
 #title {
   font-size: 200%;
   text-align: center;
   margin-top: 3%;
-  display: table;
+  /*display: table;*/
 
 }
 #content {
   margin-top: 2%;
-  display: table;
+  /*display: table;*/
 
 }
   #searches {
-    display: table;
+    /*display: table;*/
   }
   .row {
     margin-top: 2.5%;

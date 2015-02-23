@@ -6,11 +6,11 @@ var movieFilter = angular.module('movieFilterApp',
 
 
 .config(function($stateProvider, $urlRouterProvider) {
-  $urlRouterProvider.otherwise("/home");
+  $urlRouterProvider.otherwise("/");
 
   $stateProvider
     .state('home', {
-      url: '/home',
+      url: '/',
       templateUrl: 'views/home.html',
       controller: 'MovieFilterCtrl'
     })
