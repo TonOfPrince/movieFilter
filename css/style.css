@@ -10,9 +10,6 @@ body {
   background-image: url("../img/background.jpg");
   color: white;
 }
-/*.backgroundWrapper {
-  background-image: url("../img/background.jpg");
-}*/
 a {
   color: white;
 }
@@ -20,17 +17,11 @@ a {
   font-size: 200%;
   text-align: center;
   margin-top: 3%;
-  /*display: table;*/
-
 }
 #content {
   margin-top: 2%;
-  /*display: table;*/
 
 }
-  #searches {
-    /*display: table;*/
-  }
   .row {
     margin-top: 2.5%;
   }
