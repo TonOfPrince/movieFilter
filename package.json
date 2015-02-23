@@ -18,7 +18,6 @@
   },
   "homepage": "https://github.com/TonOfPrince/movieFilter",
   "dependencies": {
-    "docco-husky": "^0.3.3",
     "express": "^4.12.0"
   }
 }
