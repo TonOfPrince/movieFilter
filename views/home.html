@@ -28,7 +28,7 @@
   <table id="searchObjResults" class="center">
     <tr><th>Title</th><th>Categories</th><th>Year</th></tr>
     <!-- List all th emovies out in a table -->
-    <tr ng-repeat="movieObj in movies.movies | filter:search:strict">
+    <tr ng-repeat="movieObj in movies.movies | filter:search">
       <!-- Movie title -->
       <td>{{movieObj.title}}&nbsp;</td>
       <td>
