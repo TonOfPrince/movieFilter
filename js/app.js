@@ -16,7 +16,7 @@ var movieFilter = angular.module('movieFilterApp',
     })
     .state('docs', {
       url: '/docs',
-      templateUrl: 'docs/index.html',
+      templateUrl: 'docs/js/app.js.html',
     })
 });
 
